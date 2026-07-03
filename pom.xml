@@ -87,11 +87,6 @@
 
                 <configuration>
 
-                    <!-- If using testng.xml -->
-                    <suiteXmlFiles>
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-
                     <!-- Allure Listener -->
                     <properties>
                         <property>
