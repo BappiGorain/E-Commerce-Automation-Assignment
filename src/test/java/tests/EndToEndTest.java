@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import base.BaseClass;
 import dataprovider.ConfigDataProvider;
 import dataprovider.XlsxDataProvider;
+import io.qameta.allure.Description;
 import pages.CartPage;
 import pages.LoginPage;
 import pages.LogoutPage;
@@ -37,7 +38,8 @@ public class EndToEndTest extends BaseClass
     }
 
     @Test
-    public void loginAndSearch()
+    @Description("Verify user can login successfully")
+    public void endToEndTest()
     {
     	
     	XSSFSheet sheet = xlsxDataProvider.xlsxDataReader();

@@ -14,6 +14,7 @@ import com.aventstack.extentreports.ExtentTest;
 
 import dataprovider.ConfigDataProvider;
 import reports.ExtentManager;
+import utils.AllureUtils;
 import utils.BrowserFactory;
 import utils.ScreenShot;
 import utils.WaitUtils;
@@ -64,6 +65,7 @@ public class BaseClass
 			test.fail("Test Failed : " + result.getThrowable());
 			String path = ScreenShot.takeScreenShot(driver);
 			test.addScreenCaptureFromPath(path);
+			AllureUtils.attachScreenshot(driver);
 		}
 		else if(result.getStatus() == ITestResult.SUCCESS)
 		{

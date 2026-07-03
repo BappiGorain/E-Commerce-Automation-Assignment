@@ -9,6 +9,8 @@ import org.testng.annotations.Test;
 
 import base.BaseClass;
 import dataprovider.ConfigDataProvider;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import pages.LoginPage;
 
 public class LoginPageTest extends BaseClass
@@ -24,6 +26,8 @@ private static final Logger logger = LoggerFactory.getLogger(LoginPageTest.class
         loginPage = new LoginPage();
     }
 
+    @Feature("Authentication")
+    @Story("Valid Login")
     @Test
     public void validLogin()
     {

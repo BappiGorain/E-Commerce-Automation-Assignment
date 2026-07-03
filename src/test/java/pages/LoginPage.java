@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import io.qameta.allure.Step;
 import utils.WaitUtils;
 
 public class LoginPage 
@@ -11,6 +12,8 @@ public class LoginPage
 		
 	private static final Logger logger = LoggerFactory.getLogger(LoginPage.class);
 	
+	
+	 @Step("Login with email: {0} and possword: {1}")
 	public void login(String email,String password)
 	{
 		WaitUtils.click(By.xpath("//a[normalize-space()='Log in']"));
